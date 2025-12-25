@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>游戏文案图鉴</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <div class="logo">🎮</div>
+      <div>
+        <p class="eyebrow">Game Atlas</p>
+        <h1>游戏分类与剧情文案库</h1>
+        <p class="lede">按照类型浏览精品游戏，为每个作品找到合适的描述、剧情提纲与推荐文案。</p>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <button class="primary">探索全部游戏</button>
+      <button class="ghost" id="reset-filters">重置筛选</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="filters">
+      <div class="filter-group">
+        <h2>按类型筛选</h2>
+        <div class="pill-row" id="category-pills"></div>
+      </div>
+      <div class="filter-group search-group">
+        <div>
+          <h2>搜索</h2>
+          <p class="hint">输入游戏名、标签或核心卖点</p>
+        </div>
+        <label class="search-box">
+          <span>🔍</span>
+          <input id="search" type="text" placeholder="输入关键字，例如：开放世界、合作、生存" />
+        </label>
+      </div>
+      <div class="filter-group sorts">
+        <label>
+          排序方式
+          <select id="sort">
+            <option value="featured">精选排序</option>
+            <option value="newest">按发布时间（新→旧）</option>
+            <option value="oldest">按发布时间（旧→新）</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="summary-bar">
+      <div>
+        <p class="eyebrow">当前视图</p>
+        <h3 id="result-count">共 0 款游戏</h3>
+      </div>
+      <p class="hint">点击卡片可展开剧情提要与文案段落，复制到你的策划案或宣传页面。</p>
+    </section>
+
+    <section class="grid" id="game-grid"></section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="eyebrow">文案小贴士</p>
+      <p>突出情感钩子（牺牲、羁绊、信任）、场景冲突（末日、宇宙、都市）以及可玩的选择结果，能让剧情介绍更具代入感。</p>
+    </div>
+    <div class="badges">
+      <span class="badge">原创文案</span>
+      <span class="badge">分类导航</span>
+      <span class="badge">剧情提纲</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
